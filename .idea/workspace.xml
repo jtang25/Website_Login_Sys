@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="053109a4-cdc4-4cab-9249-5fd074a8ebd0" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/homePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loginPage.java" afterDir="false" />
+    <list default="true" id="053109a4-cdc4-4cab-9249-5fd074a8ebd0" name="Changes" comment="began building first screens">
+      <change afterPath="$PROJECT_DIR$/src/introPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registerPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homePage.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669956559139</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="began building first screens">
+      <created>1669958568185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669958568185</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,6 +79,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="began building first screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="began building first screens" />
   </component>
 </project>

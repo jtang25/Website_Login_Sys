@@ -11,13 +11,15 @@ public class Main {
     public static void main(String[] args) {
         mainPanel = new JFrame();
         loginPage = new loginPage();
-        loginPage.setVisible(false);
         registerPage = new registerPage();
-        registerPage.setVisible(false);
         introPage = new introPage();
         introPage.setSize(400,400);
-        introPage.setVisible(true);
+        mainPanel.add(registerPage);
         mainPanel.add(introPage);
+        mainPanel.add(loginPage);
+        introPage.setVisible(true);
+        loginPage.setVisible(false);
+        registerPage.setVisible(false);
         mainPanel.setVisible(true);
         mainPanel.setSize(400,400);
     }

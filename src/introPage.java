@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class introPage extends JPanel {
-    private JButton login, register;
+    private static JButton login, register;
 
     introPage(){
         login = new JButton("Login");
@@ -12,7 +12,9 @@ public class introPage extends JPanel {
         login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println("Going to login page.");
                 Main.loginPage.setVisible(true);
+                System.out.println("Displayed page.");
                 Main.introPage.setVisible(false);
             }
         });
@@ -21,6 +23,7 @@ public class introPage extends JPanel {
         register.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println("Going to register page.");
                 Main.registerPage.setVisible(true);
                 Main.introPage.setVisible(false);
             }

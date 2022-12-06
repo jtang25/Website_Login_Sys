@@ -1,6 +1,21 @@
 import java.io.*;
 
 public class Server {
+
+    public static void registerAccount(String usernameToken, String passwordToken){
+        int hashedUsernameToken = jtHash(usernameToken);
+        int hashedPasswordToken = jtHash(passwordToken);
+        try {
+            BufferedWriter bw = new BufferedWriter(new PrintWriter("C:\\Users\\Jason_yj4bjfp\\IdeaProjects\\Website_Login_Sys\\src\\AccountInfo"));
+            bw.write(hashedUsernameToken+" "+hashedPasswordToken);
+            System.out.println("Account info stored");
+        }
+        catch(IOException e) {
+            System.out.println("Error 15: File Not Found");
+            e.printStackTrace();
+        }
+    }
+
     public static boolean verifyLogin(String usernameToken, String passwordToken){
         int hashedUsernameToken = jtHash(usernameToken);
         int hashedPasswordToken = jtHash(passwordToken);

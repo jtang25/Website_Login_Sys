@@ -25,6 +25,7 @@ public class loginPage extends JFrame {
         usernameTextBox.setFont(usernameTextBox.getFont().deriveFont(14f));
         username.add(usernameText);
         username.add(usernameTextBox);
+        // TODO make password hidden
         passwordTextBox = new JTextArea();
         passwordTextBox.setPreferredSize(new Dimension(350,10));
         passwordTextBox.setMaximumSize(new Dimension(350,10));

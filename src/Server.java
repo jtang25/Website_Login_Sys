@@ -6,8 +6,11 @@ public class Server {
         int hashedUsernameToken = jtHash(usernameToken);
         int hashedPasswordToken = jtHash(passwordToken);
         try {
-            BufferedWriter bw = new BufferedWriter(new PrintWriter("C:\\Users\\Jason_yj4bjfp\\IdeaProjects\\Website_Login_Sys\\src\\AccountInfo"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\Jason_yj4bjfp\\IdeaProjects\\Website_Login_Sys\\src\\AccountInfo", true));
             bw.write(hashedUsernameToken+" "+hashedPasswordToken);
+            bw.newLine();
+            bw.flush();
+            bw.close();
             System.out.println("Account info stored");
         }
         catch(IOException e) {

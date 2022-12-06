@@ -3,12 +3,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class loginPage extends JPanel {
+public class loginPage extends JFrame {
+    private JPanel mainPanel;
     private JButton submit;
     private JTextArea passwordTextBox;
     private JTextArea usernameTextBox;
 
+    // TODO make text box and frame size constant
     loginPage(){
+        mainPanel = new JPanel();
         JPanel username = new JPanel();
         username.setLayout(new BoxLayout(username, BoxLayout.X_AXIS));
         JTextField usernameText = new JTextField("Username:");
@@ -26,7 +29,7 @@ public class loginPage extends JPanel {
         passwordTextBox.setPreferredSize(new Dimension(350,10));
         passwordTextBox.setMaximumSize(new Dimension(350,10));
         passwordTextBox.setFont(passwordTextBox.getFont().deriveFont(14f));
-        submit = new JButton("SUBMIT");
+        submit = new JButton("LOGIN");
         submit.setPreferredSize(new Dimension(50, 10));
         submit.addActionListener(new ActionListener() {
             @Override
@@ -34,6 +37,7 @@ public class loginPage extends JPanel {
                 if(Server.verifyLogin(usernameTextBox.getText(), passwordTextBox.getText())){
                     System.out.println("Logged In.");
                 }
+                // TODO add invalid login message
                 else{
                     usernameTextBox.setText("");
                     passwordTextBox.setText("");
@@ -41,7 +45,7 @@ public class loginPage extends JPanel {
                 }
             }
         });
-        this.setLayout(new GridBagLayout());
+        mainPanel.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridwidth = 1;
@@ -50,7 +54,7 @@ public class loginPage extends JPanel {
         c.ipadx = 300;
         c.ipady = 10;
         c.insets = new Insets(5, 20, 5, 20);
-        this.add(username, c);
+        mainPanel.add(username, c);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridwidth = 1;
         c.gridy = 1;
@@ -58,7 +62,7 @@ public class loginPage extends JPanel {
         c.ipadx = 300;
         c.ipady = 10;
         c.insets = new Insets(5, 20, 5, 20);
-        this.add(passwordTextBox, c);
+        mainPanel.add(passwordTextBox, c);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridwidth = 1;
         c.gridy = 2;
@@ -66,9 +70,10 @@ public class loginPage extends JPanel {
         c.ipadx = 250;
         c.ipady = 10;
         c.insets = new Insets(20, 20, 20, 20);
-        this.add(submit, c);
+        mainPanel.add(submit, c);
         usernameTextBox.setVisible(true);
         passwordTextBox.setVisible(true);
         submit.setVisible(true);
+        this.add(mainPanel);
     }
 }

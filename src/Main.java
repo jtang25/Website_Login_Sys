@@ -3,24 +3,19 @@ import java.awt.*;
 import java.lang.*;
 
 public class Main {
-    public static JFrame mainPanel;
     public static introPage introPage;
     public static loginPage loginPage;
     public static registerPage registerPage;
 
     public static void main(String[] args) {
-        mainPanel = new JFrame();
         loginPage = new loginPage();
+        loginPage.setSize(400,400);
         registerPage = new registerPage();
+        registerPage.setSize(400,400);
         introPage = new introPage();
         introPage.setSize(400,400);
-        mainPanel.add(registerPage);
-        mainPanel.add(introPage);
-        mainPanel.add(loginPage);
         introPage.setVisible(true);
-        loginPage.setVisible(false);
         registerPage.setVisible(false);
-        mainPanel.setVisible(true);
-        mainPanel.setSize(400,400);
+        loginPage.setVisible(false);
     }
 }

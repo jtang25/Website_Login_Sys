@@ -1,4 +1,4 @@
 import javax.swing.*;
 
-public class registerPage extends JFrame {
+public class registerPage extends JPanel {
 }

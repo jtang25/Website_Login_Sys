@@ -3,9 +3,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class introPage extends JPanel{
-    static JButton login, register;
-    public static void main (String[] args){
+public class introPage extends JPanel {
+    private JButton login, register;
+
+    introPage(){
         login = new JButton("Login");
         login.setPreferredSize(new Dimension(100, 10));
         login.addActionListener(new ActionListener() {
@@ -30,28 +31,25 @@ public class introPage extends JPanel{
         textField.setHorizontalAlignment(JTextField.CENTER);
         textField.setPreferredSize(new Dimension(400,200));
         textField.setEditable(false);
-        JPanel p = new JPanel();
-        p.setLayout(new GridBagLayout());
+        this.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
-        c.insets = new Insets(1, 1, 1, 1);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridwidth = 2;
         c.gridy = 0;
         c.gridx = 0;
         c.ipadx = 400;
         c.ipady = 10;
-        p.add(textField, c);
+        this.add(textField, c);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridwidth = 1;
-        c.gridx = 0;
         c.gridy = 1;
         c.ipadx = 140;
         c.ipady = 10;
-        p.add(login, c);
+        this.add(login, c);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 1;
         c.ipadx = 100;
         c.ipady = 10;
-        p.add(register, c);
+        this.add(register, c);
     }
 }

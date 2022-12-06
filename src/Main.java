@@ -1,21 +1,24 @@
 import javax.swing.*;
+import java.awt.*;
 import java.lang.*;
 
 public class Main {
-    public static JFrame mainFrame;
+    public static JFrame mainPanel;
     public static introPage introPage;
     public static loginPage loginPage;
     public static registerPage registerPage;
 
     public static void main(String[] args) {
-        mainFrame = new JFrame();
-        introPage = new introPage();
-        mainFrame.add(introPage);
+        mainPanel = new JFrame();
         loginPage = new loginPage();
-        mainFrame.add(loginPage);
         loginPage.setVisible(false);
         registerPage = new registerPage();
-        mainFrame.add(registerPage);
-        loginPage.setVisible(false);
+        registerPage.setVisible(false);
+        introPage = new introPage();
+        introPage.setSize(400,400);
+        introPage.setVisible(true);
+        mainPanel.add(introPage);
+        mainPanel.setVisible(true);
+        mainPanel.setSize(400,400);
     }
 }
